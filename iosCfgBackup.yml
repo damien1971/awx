@@ -1,0 +1,18 @@
+--- 
+- name: Configuration Backup
+  hosts: all
+  gather_facts: false
+  connection: network_cli
+
+  tasks:
+  - name: Show Running Config
+   ios_command: 
+     commands:
+     - show running-config
+   register: config  
+
+  - name: Save Output
+    copy:
+      content: "{{ config.stdout[0] }}"
+      dest: "/etc/ansible/playbooks/{{ inventory_hostname }}.config"
+

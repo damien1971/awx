@@ -1,0 +1,10 @@
+---
+- name: Cisco IOS Command Demo
+  ios_static_route:
+    aggregate:
+      - {item1}
+      - {item2}
+    state: present
+  register: route1
+
+  

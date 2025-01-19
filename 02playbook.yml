@@ -1,0 +1,25 @@
+---
+- name: Network Getting Started First Playbook Extended
+  connection: network_cli
+  gather_facts: false
+  hosts: all
+  tasks:
+
+  - name: Get config for ios devices
+    ios_facts:
+      gather_subset: all
+
+  - name: Display the config
+      ansible.builtin.debug:
+#      msg: "The hostname is {{ ansible_net_hostname}} and the OS is {{ ansible_net_version }}"
+      msg: “{{ hostvrs[inventory_hostname]}}”
+
+  - name: Create username
+    ios_config:
+    backup: yes
+    lines:
+    - username admin priv 15 secret admin
+
+  - name: Get changed config for IOS devices
+      ios_facts:
+      gather_subset: all
