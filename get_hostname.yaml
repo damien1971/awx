@@ -8,6 +8,6 @@
     ios_facts:
       gather_subnet: all
 
-  - name: Display the config
-      debug: 
+  - name: Display the config and this is modified locally
+      debug:
       msg: "The hostname is {{ ansible_net_hostname}} and the OS is {{ ansible_net_version }}"
