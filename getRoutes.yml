@@ -1,0 +1,18 @@
+---
+- name: Cisco IOS command
+  connection: network_cli
+  gather_facts: false
+  hosts: all
+  tasks:
+
+  - name: Execute show commands
+    ios_command:
+      commands:
+        - show ip route
+        - show ip route vrf tenant1
+        - show ip route vrf tenant2
+    register: sh_output
+  - name: display the output
+    debug:
+       var: sh_output
+#       msg: "{{sh_output}}"
