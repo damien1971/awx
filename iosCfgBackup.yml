@@ -6,7 +6,7 @@
 
   tasks:
   - name: Show Running Config
-    cisco.ios.ios_command:
+    ios_command:
       commands:
       - show running-config
     register: config
