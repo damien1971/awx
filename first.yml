@@ -1,5 +1,0 @@
----
-- name: Network Getting
-connection: network_cli
-gather_facts: false
-hosts: all
