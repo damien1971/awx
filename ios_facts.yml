@@ -1,0 +1,15 @@
+---
+- name: Test IOS Facts
+  hosts: PE
+  tasks:
+    - debug:
+        var: ansible_facts
+
+    - name: Gather IOS facts 02
+      ios_facts:
+        tather_subset: all
+      register: all_subset
+
+    - name: Print Subet all 03
+      debug:
+        var: all_subset
