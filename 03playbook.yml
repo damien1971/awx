@@ -10,7 +10,7 @@
       gather_subnet: all
 
   - name: Display the config
-      debug:
+      ansible.builtin.debug:debug:
       msg: "The hostname is {{ ansible_net_hostname}} and the OS is {{ ansible_net_version }}"
 #      msg: msg: “{{ hostvrs[inventory_hostname]}}”
 
