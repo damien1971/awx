@@ -1,4 +1,4 @@
---- 
+---
 - name: Configuration Backup
   hosts: all
   gather_facts: false
@@ -6,13 +6,12 @@
 
   tasks:
   - name: Show Running Config
-   ios_command: 
+   ios_command:
      commands:
      - show running-config
-   register: config  
+   register: config
 
-  - name: Save Output
+  - name: Save Output in operator node
     copy:
       content: "{{ config.stdout[0] }}"
       dest: "/etc/ansible/playbooks/{{ inventory_hostname }}.config"
-
