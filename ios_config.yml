@@ -1,0 +1,9 @@
+---
+- name: IOS config
+  hosts: PE
+
+  tasks:
+    - name: Config mode command 01
+      ios_config:
+        lines:
+          - ip domain name ansible.com
