@@ -9,6 +9,6 @@
     ios_facts:
       gather_subset: all
 
-  - name: Display the config and testing SCM
+  - name: Display the config and testing SCM, this is 2nd trial
       ansible.builtin.debug:debug:
       msg: "The hostname is {{ ansible_net_hostname}} and the OS is {{ ansible_net_version }}"
