@@ -1,5 +1,3 @@
 netmiko
 pyats
-ansible
-ansible-pylibssh
-ntc-templates
+requests

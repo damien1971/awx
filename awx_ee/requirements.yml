@@ -1,5 +1,5 @@
 ---
 collections:
 -	name: cisco.ios
--	name: ansible.utils
+-	name: kebeernets.core
 -	name: ansible.netcommon
