@@ -6,7 +6,7 @@ build_arg_defaults:
   #ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: "-v"
   #ansible_config: 'ansible.cfg'
 dependencies:
-  #galaxy: requirements.yml
+  galaxy: requirements.yml
   python: requirements.txt
   system: bindep.txt
 additional_build_steps:
